@@ -9,7 +9,7 @@ def rho(h):
 	
 	return atm[i - 1][1] + gradient * (h - atm[i - 1][0])
 
-f = open("atm.txt", "r")
+f = open("marsatm.txt", "r")
 lines = f.readlines()
 f.close()
 
