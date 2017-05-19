@@ -16,8 +16,9 @@ f.close()
 atm = []
 
 for line in lines:
-	row = [float(line.split(" ")[0]) * 1000, float(line.split(" ")[2])]
-	atm.append(row)
+	if ord(line[0]) >= 48 and ord(line[0]) <= 57:
+		row = [float(line.split(" ")[0]) * 1000, float(line.split(" ")[2])]
+		atm.append(row)
 
 hlist = []
 xlist = []
@@ -28,8 +29,8 @@ glist = []
 
 g = 3.711
 
-h_t = 2000
-fuel = 110
+h_t = 1750
+fuel = 68
 
 h = 20000.0
 vX = 262.0 * math.cos(20.0 * math.pi / 180.0)
